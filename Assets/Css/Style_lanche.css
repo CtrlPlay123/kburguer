@@ -1,0 +1,33 @@
+.container{
+	margin:auto;
+	display:inline-grid;
+	grid-template-columns:auto auto;
+	justify-content:center; /* Centraliza os elementos no centro na horizontal*/
+	align-items:center;  /* Centraliza os elementos no centro na vertical*/
+	gap:10px;
+	text-align:center;
+}
+
+.description{
+	text-align:justify;
+	hyphens: auto; /* aplica a hifenização automática */
+
+}
+
+main{
+	margin:auto;
+	width:60%;
+
+}
+
+@media only screen and (max-width: 600px)
+{
+	h2{
+		hyphens:auto;
+		font-size:0.95em;
+	}
+	.container{
+		display:inline-block;
+		
+	}
+}

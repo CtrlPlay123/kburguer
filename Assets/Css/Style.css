@@ -1,0 +1,110 @@
+﻿*{
+	box-sizing:border-box;
+}
+
+body{
+	margin:auto;
+	display:grid;
+	justify-content:center; /* Centraliza os elementos no centro na horizontal*/
+	align-items:center;  /* Centraliza os elementos no centro na vertical*/
+	background:radial-gradient(#32170F, #000);
+	color:#FFF;
+	font-family: "Bebas Neue", sans-serif;
+	letter-spacing:1.1px; /* Define o espacamento entre as letras */ 
+}
+
+.imglanche{
+	width:200px;
+	border-radius:8px;
+	border: 2px solid #FFF; /*Tipos de borda - Groove, inside, solid*/
+	box-shadow:-4px 4px rgba(0, 0, 0, 0.2);
+}
+
+#logotipo{
+	width:128px;
+}
+
+header{
+	text-align:center;
+}
+
+.menu a{
+	margin:2%;
+	text-decoration:none;
+	color:#FFF;
+	font-size: 1em;
+	transition:0.5s;
+
+}
+
+.menu a:hover{
+	text-decoration:underline;
+	color:#FFAA00;
+	font-size: 1.2em;
+	text-shadow: 1px 1px red;
+	transition:0.5s;
+}
+
+#cardapio{
+	margin:auto;
+	display:inline-grid;
+	grid-template-columns:auto auto auto;
+	justify-content:center; /* Centraliza os elementos no centro na horizontal*/
+	align-items:center;  /* Centraliza os elementos no centro na vertical*/
+	gap:10px;
+	text-align:center;
+}
+
+
+.preco{
+	font-size:1.8em;
+}
+
+.btn_comprar{
+	cursor:pointer;
+	background:linear-gradient(lime, green);
+	border-radius: 4px;
+	border:none;
+	color:#FFF;
+	transition:0.5s;
+	font-size:1.2em;
+}
+
+.btn_comprar:hover{
+	transition:0.5s;
+	font-size:1.3em;
+}
+
+#contato img{
+	width:32px;
+	height:32px;
+	margin:10px;
+}
+
+#contato a{
+	display:flex;
+	text-decoration:none;
+	color:white;
+}
+
+#contato{
+	margin-top:50px;
+	display:inline-grid;
+	grid-template-columns:auto auto;
+	justify-content:center;
+	align-items:center;
+	gap:10px;	
+}
+
+
+@media only screen and (max-width: 600px)
+{
+	h2{
+		hyphens:auto;
+		font-size:0.95em;
+	}
+	#cardapio{
+		display:inline-block;
+		
+	}
+}

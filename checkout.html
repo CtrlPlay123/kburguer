@@ -1,0 +1,95 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+<head>
+	<title> KBurguer </title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" href="Assets/Imagens/icon.png">
+	<link rel="stylesheet" href="Assets/Css/Style.css">
+
+	<!-- Fonts do Google-->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+</head>
+<body>
+	<header id="home">
+		<a href="#">
+			<img id="logotipo" src="Assets/Imagens/logotipo.png"/>
+		</a>
+		
+		<nav class="menu">
+			<a href="index.html#home"> Home </a>
+			<a href="index.html#cardapio"> Cardápio </a>
+			<a href="index.html#contato"> Contato </a>
+			<hr/>			
+		</nav>
+		
+		<h1> K-Burger </h1>
+		<h2> O Melhor hamburger artesanal de São Paulo </h2>
+	</header>
+	
+	<form action="https://api.whatsapp.com/send" method="get" target="_blank">
+	
+	<!-- Número do whatsapp de quem estará recebendo a mensagem, ou seja, a empresa-->
+		<input type="hidden" name="phone" value="+551239523334">
+		
+	<!-- Mensagem -->
+		<input type="hidden" name="mensagem" 
+			value="
+				Pedido de compra: %0A
+				Nome do cliente: {{name}}%0A
+				Lanche escolhido: {{lancheName}}%0A
+				Endereço de entrega: {{address}}%0A
+				Forma de pagamento: {{payment}}
+			"
+		>
+		
+	<!-- Nome do cliente -->
+		<label for="name"> Nome do cliente: </label><br/>
+		<input type="text" id="name" name="name" required><br/>
+		
+	<!-- Nome do lanche -->
+		<label for="lancheName"> Nome do Lanche: </label><br/>
+		<select type="text" id="lancheName" name="lancheName" required>
+			<option value="BarbieKill"> Barbie Kill </option>
+			<option value="Kboom"> KBoom </option>
+			<option value="Baconcheddar"> Bacon Cheddar </option>
+		</select>
+		<br/>
+		
+	<!-- Endereço -->
+		<label for="address"> Endereço: </label><br/>
+		<input type="text" id="address" name="address" required><br/>
+		
+	<!-- Forma de pagamento -->
+		<label for="payment"> Forma de Pagamento: </label><br/>
+		<select id="payment" name="payment">
+			<option value="pix"> Pix </option>
+			<option value="card"> Cartão </option>
+		</select>
+		<br/><br/>
+		
+		<input class="btn_comprar" type="submit" value="Fazer pedido">
+		
+	</form>
+	
+	<footer id="contato">
+		<div class="contatos">
+			<a target="_self" href="#">
+				<img class="imgcontatos" src="Assets/Imagens/Instagram.png"/>
+				<p>@KBurguer</p>
+			</a>
+		</div>
+		
+		<div class="contatos">
+			<a target="_self" href="#">
+				<img class="imgcontatos" src="Assets/Imagens/Whatsapp.png"/>
+				<p>(12) 99999-0000</p>
+			</a>
+		</div>
+	</footer>
+	
+	<script src="Assets/JS/script.js"></script>
+</body>
+</html>
